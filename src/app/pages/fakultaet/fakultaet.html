@@ -1,0 +1,34 @@
+<a mat-button routerLink="/menu" class="back-link">Back to Menu</a>
+<hr />
+
+<mat-card class="page-card">
+  <mat-card-title>Fakultät</mat-card-title>
+  <p>Fakultät Berechnung</p>
+
+  <form (ngSubmit)="calculateFakultaet()">
+    <mat-form-field appearance="outline">
+      <mat-label>Number Input (1–12)</mat-label>
+      <input
+        matInput
+        type="number"
+        min="1"
+        max="12"
+        name="numberInput"
+        aria-label="Number Input (1–12)"
+        [(ngModel)]="numberInput"
+      />
+    </mat-form-field>
+
+    <div class="actions">
+      <button mat-raised-button type="submit" [disabled]="numberInput === null">Berechnung</button>
+
+      <button mat-raised-button type="button" (click)="numberInput = null; result = ''">
+        Zurücksetzen
+      </button>
+    </div>
+  </form>
+
+  @if (result) {
+    <p class="result">{{ result }}</p>
+  }
+</mat-card>

@@ -1,0 +1,23 @@
+.card-box {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  width: auto;
+}
+.mat-icon{
+  margin-top: 2px;
+  overflow: visible;
+}
+.item-header {
+  font-weight: 600;
+  font-size: 16px;
+  
+}
+.item-description {
+  opacity: 0.8;
+}
+.card-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}

@@ -1,0 +1,38 @@
+/* wochentag.scss */
+
+.full {
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.result {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--mat-sys-surface-container);
+  border: 1px solid var(--mat-sys-outline-variant);
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--mat-sys-primary);
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
+.back-link mat-icon {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.page-card {
+  max-width: 600px;
+}

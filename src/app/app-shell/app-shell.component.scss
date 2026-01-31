@@ -1,0 +1,47 @@
+.sidenav-container {
+  height: 100vh;
+}
+
+.app-sidenav {
+  width: 280px; /* was 200/240 — give the text room */
+}
+
+.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.app-content {
+  padding: 16px;
+}
+mat-nav-list a.mat-mdc-list-item {
+  width: 100%;
+  border-radius: 10px;
+}
+mat-nav-list a.mat-mdc-list-item .mdc-list-item__primary-text {
+  white-space: normal; /* allow wrap */
+  overflow: visible; /* don’t clip */
+  text-overflow: unset; /* no ... */
+  line-height: 1.25;
+}
+.app-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toolbar-title {
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mat-toolbar {
+  display: flex;
+  gap: 12px;
+}
+.mat-toolbar button.mat-icon-button {
+  margin-right: 8px;
+}

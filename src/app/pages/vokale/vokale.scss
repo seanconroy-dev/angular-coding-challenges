@@ -1,0 +1,30 @@
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 12px;
+}
+form {
+  margin: 0;
+  }
+.full-width {
+  width: 100%;
+  
+}
+
+.buttons button {
+  flex: 1;
+}
+.count {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--mat-sys-surface-container);
+  border: 1px solid var(--mat-sys-outline-variant);
+}
+.page-card {
+  max-width: 600px;
+
+}

@@ -1,1 +1,104 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+/* ======================
+   Material Theme (Light)
+   ====================== */
+html {
+  height: 100%;
+
+  @include mat.theme(
+    (
+      color: (
+        theme-type: light,
+        primary: mat.$red-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+/* ======================
+   Base layout
+   ====================== */
+body {
+  margin: 0;
+  min-height: 100vh;
+  color-scheme: light;
+
+  background-color: var(--mat-sys-surface); /* plain white */
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+}
+
+/* ======================
+   App shell
+   ====================== */
+mat-sidenav-container {
+  height: 100vh;
+}
+
+/* ======================
+   Cards 
+   ====================== */
+.mat-mdc-card.custom-card {
+  background-color: var(--mat-sys-surface-container-high);
+  border-radius: 16px;
+  box-shadow: var(--mat-sys-level2);
+  padding: 12px;
+  cursor: pointer;
+  transition:
+    box-shadow 150ms ease,
+    transform 150ms ease,
+    background-color 150ms ease;
+}
+
+.mat-mdc-card.custom-card:hover {
+  background-color: var(--mat-sys-surface-container-highest);
+  transform: translateY(-2px);
+  box-shadow: var(--mat-sys-level4);
+}
+
+.mat-mdc-card.custom-card:active {
+  transform: translateY(0);
+  box-shadow: var(--mat-sys-level1);
+}
+
+.mat-mdc-card.custom-card mat-icon {
+  color: var(--mat-sys-primary);
+}
+
+/* ======================
+   Page card 
+   ====================== */
+.page-card {
+  background-color: var(--mat-sys-surface-container);
+  border-radius: 20px;
+  box-shadow: var(--mat-sys-level1);
+  border: 1px solid var(--mat-sys-outline-variant);
+  padding: 24px;
+  max-width: 900px;
+  margin: 24px auto;
+}
+
+.page-card h1 {
+  margin-top: 0;
+}
+
+.page-card p {
+  margin-bottom: 24px;
+}
+
+/* ======================
+   Nav active state
+   ====================== */
+.active-link {
+  color: var(--mat-sys-primary);
+  font-weight: 600;
+}
+.page-card {
+  //max-width: 600px;
+  margin: 24px auto;
+  padding: 16px;
+}

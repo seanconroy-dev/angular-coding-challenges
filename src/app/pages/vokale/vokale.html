@@ -1,0 +1,31 @@
+<a mat-button routerLink="/menu" class="back-link">Back to Menu</a>
+<hr/>
+
+<mat-card class="page-card" >
+  <h2>Vokale zählen</h2>
+
+  <form (ngSubmit)="countVowels()">
+    <mat-form-field appearance="outline" floatLabel="always" class="full-width">
+      <mat-label>Gib ein Wort oder einen Satz ein</mat-label>
+
+      <!-- Enter submits, Shift+Enter inserts newline -->
+      <textarea
+        matInput
+        rows="4"
+        name="text"
+        [(ngModel)]="text"
+        (keydown.enter)="onEnter($event)"
+        aria-label="Gib ein Wort oder einen Satz ein">
+      </textarea>
+    </mat-form-field>
+
+    <div class="buttons">
+      <button mat-raised-button type="submit">Zählen</button>
+      <button mat-raised-button type="button" (click)="clear()">Zurücksetzen</button>
+    </div>
+  </form>
+
+  <p *ngIf= "vowelCount !== null" class="count">
+    Die Anzahl der Vokale ist: <strong>{{ vowelCount }}</strong>
+  </p>
+</mat-card>

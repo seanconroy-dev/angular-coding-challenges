@@ -1,0 +1,31 @@
+<a mat-button routerLink="/menu" class="back-link">Back to Menu</a>
+<hr />
+<mat-card class="page-card">
+  <h2>Häufigkeit</h2>
+  <p>Häufigkeitsanalyse</p>
+
+  <form (ngSubmit)="calculateArraystats()">
+    <mat-form-field appearance="outline">
+      <mat-label>Fill Array (e.g., 1,2,3)</mat-label>
+      <input
+        matInput
+        type="text"
+        name="numberInput"
+        aria-label=" Number Inputs (1–100)"
+        [(ngModel)]="numberInput"
+      />
+    </mat-form-field>
+
+    <div class="actions">
+      <button mat-raised-button type="submit" [disabled]="numberInput === ''">Berechnung</button>
+
+      <button mat-raised-button type="button" (click)="numberInput = ''; result = ''">
+        Zurücksetzen
+      </button>
+    </div>
+  </form>
+
+  @if (result) {
+    <p class="result">{{ result }}</p>
+  }
+</mat-card>

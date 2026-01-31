@@ -1,0 +1,35 @@
+<a mat-button routerLink="/menu" class="back-link">Back to Menu</a>
+<hr />
+<mat-card class="page-card">
+  <h2>Wochentag</h2>
+  <p>Wochentag Berechnung</p>
+  <mat-form-field appearance="outline">
+    <mat-label>Tag (1–7)</mat-label>
+    <input
+      matInput
+      type="number"
+      min="1"
+      max="7"
+      aria-label="Tag (1–7)"
+      [(ngModel)]="tag"
+      (keyup.enter)="berechneWochentag()"
+    />
+  </mat-form-field>
+
+  <div class="actions">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="berechneWochentag()"
+      [disabled]="tag === null"
+    >
+      Berechnung
+    </button>
+
+    <button mat-button type="button" (click)="tag = null; result = ''">Zurücksetzen</button>
+  </div>
+
+  @if (result) {
+    <p class="result">{{ result }}</p>
+  }
+</mat-card>

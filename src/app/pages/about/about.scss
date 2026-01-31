@@ -1,0 +1,98 @@
+/* About page SCSS (works nicely with Angular Material + your centered card layout) */
+
+/* Page wrapper */
+.about-page {
+  padding: 24px 16px;
+}
+
+/* Back link + divider spacing (optional if you have them in template) */
+.about-page__top {
+  margin-bottom: 16px;
+}
+
+.about-page__divider {
+  margin: 12px 0 24px;
+}
+
+/* Center the main card like in your screenshots */
+.about-card {
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius: 14px;
+}
+
+/* Material card inner spacing */
+.about-card mat-card-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.about-card mat-card-subtitle {
+  margin-top: 6px;
+  opacity: 0.8;
+}
+
+.about-card mat-card-content {
+  padding-top: 12px;
+}
+
+/* Inner “Über das Projekt” block */
+.about-section {
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: 12px;
+
+  /* subtle box to match your soft UI */
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.about-section__title {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.about-section p {
+  margin: 0 0 12px;
+  line-height: 1.55;
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Make bold text pop without feeling shouty */
+.about-section strong {
+  font-weight: 700;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .about-card {
+    border-radius: 12px;
+  }
+
+  .about-card mat-card-title {
+    font-size: 24px;
+  }
+
+  .about-section {
+    padding: 14px;
+  }
+
+  .about-section__title {
+    font-size: 20px;
+  }
+}
+.about-card mat-card-header {
+  padding: 20px 20px 0;
+}
+
+.about-card mat-card-title {
+  margin-bottom: 4px;
+}
+.page-card {
+  max-width: 600px;
+}
