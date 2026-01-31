@@ -6,7 +6,7 @@
   "start": "ng serve",
   "build": "ng build",
   "build:pages": "ng build --configuration production --base-href /angular-coding-challenges/",
-  "deploy": "npm run build:pages && npx gh-pages -d dist/SCH-Aufgaben-v2"
+  "deploy": "npm run build:pages && npx gh-pages -d dist/SCH-Aufgaben-v2/browser --dotfiles"
 },
   "prettier": {
     "printWidth": 100,
