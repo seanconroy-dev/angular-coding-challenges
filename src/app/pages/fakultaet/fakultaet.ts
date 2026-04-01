@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-
+import { calculateFakultaet } from './fakultaet.util';
 
 /**
  * Komponente zur Berechnung der Fakultät einer vom Benutzer eingegebenen Zahl.*/
@@ -38,33 +38,8 @@ export class Fakultaet {
    * die Validierung sowie die Berechnung der Fakultät.
    */
   calculateFakultaet(): void {
-    if (this.numberInput === null) {
-      this.result = 'Bitte eine Zahl eingeben.';
-      return;
-    }
-
-    try {
-      const fakultaet = this.berechneFakultaet(this.numberInput);
-      this.result = `Die Fakultät von ${this.numberInput} ist ${fakultaet}.`;
-    } catch (error) {
-      this.result = (error as Error).message;
-    }
+    calculateFakultaet.call(this);
   }
 
-  /**
-   * Berechnet die Fakultät rekursiv.
-   * Der Wertebereich ist bewusst begrenzt, um Überläufe zu vermeiden.
-   */
-  berechneFakultaet(n: number): number {
-    if (n < 0 || n > 12) {
-      throw new Error('n must be between 0 and 12');
-    }
-
-    if (n === 0) {
-      return 1;
-    }
-
-    return n * this.berechneFakultaet(n - 1);
-  }
 }
 

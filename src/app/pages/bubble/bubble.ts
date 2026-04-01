@@ -6,7 +6,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { bubbleSort, parseNumbers } from './bubble.util';
+import { bubbleSort } from './bubble.util';
+import { parseNumbers } from '../../shared/utils/number.util';
 
 
 @Component({

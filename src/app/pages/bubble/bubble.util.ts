@@ -1,3 +1,5 @@
+import { parseNumbers as parseSharedNumbers } from '../../shared/utils/number.util';
+
 export function bubbleSort(input: string): string {
   let a: number[] = input.split(',').map(Number);
   let swapped = true;
@@ -19,22 +21,5 @@ export function bubbleSort(input: string): string {
 }
 
 export function parseNumbers(input: string): number[] {
-  const parts = input.split(',');
-  const arr: number[] = [];
-
-  for (let i = 0; i < parts.length; i++) {
-    const trimmed = parts[i].trim();
-
-    if (trimmed === '') {
-      continue;
-    }
-
-    const value = Number(trimmed);
-
-    if (!isNaN(value)) {
-      arr.push(value);
-    }
-  }
-
-  return arr;
+  return parseSharedNumbers(input);
 }

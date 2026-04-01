@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { parseNumbers } from '../../shared/utils/number.util';
 
 @Component({
   selector: 'app-min-max-durch',
@@ -26,7 +27,7 @@ export class MinMaxDurch {
   result = '';
   calculateArraystats(): void {
     // Scanner.nextLine()
-    const arr = this.parsenumbers(this.numberInput);
+    const arr = parseNumbers(this.numberInput);
 
     if (arr.length === 0) {
       this.result = 'Bitte Zahlen eingeben. zb: 1,2,3';
@@ -51,22 +52,6 @@ export class MinMaxDurch {
     this.result =
       `min: ${min}  durchschnitt: ${average.toFixed(2)}  max: ${max}`;
   }
-  parsenumbers(input: string): number[] {
-    //  THIS IS THE INITIALIZATION 
-    const arr: number[] = [];
-
-    const parts = input.split(',');
-
-    for (let i = 0; i < parts.length; i++) {
-      const value = Number(parts[i].trim());
-      if (!isNaN(value)) {
-        arr.push(value);
-      }
-    }
-
-    return arr;
-  }
-
 }
 
 
