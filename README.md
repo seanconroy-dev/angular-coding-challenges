@@ -1,5 +1,7 @@
 # Angular Coding Challenges
 
+![Angular Coding Challenges Main Page](assets/Angular-coding-main-page.png)
+
 **Live Demo:**  
 https://seanconroy-dev.github.io/angular-coding-challenges/
 
