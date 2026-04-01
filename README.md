@@ -1,9 +1,10 @@
 # Angular Coding Challenges
 
-![Angular Coding Challenges Main Page](assets/Angular-coding-main-page.png)
-
 **Live Demo:**  
 https://seanconroy-dev.github.io/angular-coding-challenges/
+
+![Angular Coding Challenges Main Page](assets/Angular-coding-main-page.png)
+
 
 An Angular application implementing common coding challenges with interactive user interfaces for entering inputs and testing outputs.  
 The challenges are based on Java programming exercises and have been reimplemented in TypeScript using Angular.
