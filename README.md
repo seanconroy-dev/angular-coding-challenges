@@ -73,9 +73,14 @@ This project is deployed using GitHub Pages.
 
 ## Testing
 
-Unit tests for core logic are planned to ensure correctness and maintainability.
-Future improvements include adding test coverage for key algorithms and components.
+This project includes unit tests for core challenge logic to ensure correctness and maintainability.
 
+Run tests with:
+
+```bash
+ng test --watch=false
+
+```
 ## License
 
 This project is licensed under the MIT License.
