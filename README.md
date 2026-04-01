@@ -1,26 +1,34 @@
 # Angular Coding Challenges
 
+An interactive Angular application demonstrating common programming challenges with a focus on clean architecture, reusable components, and user-driven validation.
+
 **Live Demo:**  
 https://seanconroy-dev.github.io/angular-coding-challenges/
 
 ![Angular Coding Challenges Main Page](assets/Angular-coding-main-page.png)
 
+## What this project demonstrates
 
-An Angular application implementing common coding challenges with interactive user interfaces for entering inputs and testing outputs.  
-The challenges are based on Java programming exercises and have been reimplemented in TypeScript using Angular.
+- Clear separation of business logic and UI
+- Design of reusable and maintainable Angular components
+- Handling dynamic user input and real-time output
+- Implementation of core algorithms in TypeScript
 
 ## Overview
 
-This application does not provide problem statements for users to solve.  
-Instead, it presents completed implementations of coding challenges that can be interactively tested through a graphical user interface.
+This application provides interactive implementations of common coding challenges, allowing users to experiment with inputs and immediately see results.
 
 The focus of the project is on:
-- implementing algorithms and basic programming logic in TypeScript
-- separating business logic from the user interface
-- building reusable and structured Angular components
-- allowing users to validate implementations through custom inputs
+- Implementing algorithms and core programming logic in TypeScript
+- Separating business logic from the user interface
+- Building reusable and structured Angular components
+- Allowing users to validate implementations through custom inputs
 
 Each challenge is represented by its own UI, where inputs can be entered and results are displayed immediately.
+
+## Project Goal
+
+The goal of this project is to translate typical programming exercises into interactive user interfaces, making algorithm behavior easier to explore, understand, and validate through interactive input.
 
 ## Implemented Coding Challenges
 
@@ -62,6 +70,11 @@ http://localhost:4200
 ## Deployment
 
 This project is deployed using GitHub Pages.
+
+## Testing
+
+Unit tests for core logic are planned to ensure correctness and maintainability.
+Future improvements include adding test coverage for key algorithms and components.
 
 ## License
 
