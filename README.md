@@ -13,6 +13,12 @@ https://seanconroy-dev.github.io/angular-coding-challenges/
 
 ![Angular Coding Challenges Main Page](assets/Angular-coding-main-page.png)
 
+> Example: Bubble sort with dynamic input
+> 
+
+![App Demo](assets/bubbleSort.gif)
+
+
 ## Key Technical Decisions
 
 - Business logic is isolated in pure TypeScript utility modules to ensure testability and reuse
