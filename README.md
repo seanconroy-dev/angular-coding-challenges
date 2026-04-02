@@ -1,18 +1,31 @@
+![Angular](https://img.shields.io/badge/Angular-Framework-red)
+![TypeScript](https://img.shields.io/badge/TypeScript-Language-blue)
+![Tests](https://img.shields.io/badge/Tested-Yes-green)
+
 # Angular Coding Challenges
 
-An interactive Angular application demonstrating common programming challenges with a focus on clean architecture, reusable components, and user-driven validation.
+An interactive Angular application that transforms classic programming challenges into real-time, user-driven experiences.
+
+The project emphasizes clean separation between business logic and UI, reusable component design, and testable TypeScript implementations.
 
 **Live Demo:**  
 https://seanconroy-dev.github.io/angular-coding-challenges/
 
 ![Angular Coding Challenges Main Page](assets/Angular-coding-main-page.png)
 
-## What this project demonstrates
+## Key Technical Decisions
 
-- Clear separation of business logic and UI
-- Design of reusable and maintainable Angular components
-- Handling dynamic user input and real-time output
-- Implementation of core algorithms in TypeScript
+- Business logic is isolated in pure TypeScript utility modules to ensure testability and reuse
+- UI components are kept lightweight and focused on presentation and interaction
+- Each challenge is implemented as an independent feature module using Angular standalone components
+- Real-time validation is handled through reactive input handling without unnecessary re-renders
+
+## Architecture Overview
+
+- **UI Layer:** Angular standalone components for each challenge
+- **Logic Layer:** Pure TypeScript utility functions for algorithms
+- **Routing:** Angular Router for navigation between challenges
+- **Testing:** Unit tests targeting isolated logic modules
 
 ## Overview
 
@@ -73,14 +86,26 @@ This project is deployed using GitHub Pages.
 
 ## Testing
 
-This project includes unit tests for core challenge logic to ensure correctness and maintainability.
+Core algorithm logic is validated with unit tests for the main utility modules.
 
-Run tests with:
+Run the test suite locally with:
 
 ```bash
 ng test --watch=false
-
 ```
+
+The current test coverage includes:
+
+- Bubble Sort
+- Duplicate Removal
+- Factorial
+- Min / Max / Average
+- Frequency Analysis
+
+Example successful test run:
+
+![Test Results](assets/tests.png)
+
 ## License
 
 This project is licensed under the MIT License.
