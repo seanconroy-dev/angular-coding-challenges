@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { parseNumbers } from '../../shared/utils/number.util';
+import { calculateArrayStats } from './min-max-durch.util';
 
 @Component({
   selector: 'app-min-max-durch',
@@ -25,36 +26,17 @@ import { parseNumbers } from '../../shared/utils/number.util';
 export class MinMaxDurch {
   numberInput = '';
   result = '';
-  calculateArraystats(): void {
-    // Scanner.nextLine()
-    const arr = parseNumbers(this.numberInput);
 
-    if (arr.length === 0) {
+  calculateArraystats(): void {
+    const arr = parseNumbers(this.numberInput);
+    const stats = calculateArrayStats(arr);
+
+    if (!stats) {
       this.result = 'Bitte Zahlen eingeben. zb: 1,2,3';
       return;
     }
 
-    // min/max init
-    let min = arr[0];
-    let max = arr[0];
-    let sum = 0;
-
-    // for-each loop (same as Java)
-    for (const i of arr) {
-      if (i < min) min = i;
-      if (i > max) max = i;
-      sum += i;
-    }
-
-    const average = sum / arr.length;
-
-    // printf equivalent
     this.result =
-      `min: ${min}  durchschnitt: ${average.toFixed(2)}  max: ${max}`;
+      `min: ${stats.min}  durchschnitt: ${stats.average.toFixed(2)}  max: ${stats.max}`;
   }
 }
-
-
-
-
-
